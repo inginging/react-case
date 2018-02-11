@@ -20,12 +20,12 @@ const Circle = ( {diameter, onClick} ) => {
 
     return (
 
-        <div style={circleWidth} onClick={() => onClick(diameter)}>
-            <svg viewBox="0 0 200 200">
+        <div style={circleWidth} onClick={() => onClick(diameter)} className="c-circle">
+            <svg viewBox="0 0 200 200" className="c-circle__svg">
                 <circle cx="100" cy="100" r="100" />
             </svg>
         </div>
-        
+
     ); 
 };
 

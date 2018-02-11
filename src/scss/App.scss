@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed');
 @import '../../node_modules/sass-mq/_mq.scss';
 
 // Tools
@@ -11,19 +11,35 @@
 $global-font-size: 16px;
 $global-line-height: 24px;
 
-$global-spacing-unit: rem($global-line-height / 2);
+$global-spacing-unit: $global-line-height;
 
 
+
+// Generic
+@import './Generic/generic.normalize';
+@import './Generic/generic.box-sizing';
+@import './Generic/genreic.reset';
 
 
 body {
-    font-family: 'Montserrat';
+    font-family: 'Barlow Condensed';
+    font-weight: normal;
 }
 
 // Elements
 input[type=number] {
-    padding: $global-spacing-unit;
-    font-size: 16px;
+    padding: $global-spacing-unit / 2;
+    font-size: $global-font-size * 2;
+    border: none;
+    text-align: center;
+    background-color: rgba(255,255,255, 0.5);
+}
+
+h1 {
+    font-size: rem($global-font-size * 4);
+    font-weight: 300;
+    color: #4e403d;
+    margin-bottom: $global-spacing-unit * 2;
 }
 
 // Objects
@@ -39,9 +55,33 @@ input[type=number] {
     }
 }
 
+// Components
+.c-section-full {
+    background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
+    padding: $global-spacing-unit * 2 0;
+    min-height: 100vh;
+    height: 100%;
+}
+
+.c-circle {
+    margin: 0 auto;
+}
+
+.c-circle__svg {
+    fill: #d90000;
+}
+
 // Utilities
 .u-text-align-center {
     text-align: center !important;
+}
+
+.u-margin-bottom {
+    margin-bottom: $global-spacing-unit !important;
+}
+
+.u-margin-bottom-2x {
+    margin-bottom: $global-spacing-unit * 2 !important;
 }
 
 

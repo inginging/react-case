@@ -78,16 +78,17 @@ class App extends Component {
 
 		return (
 			<Fragment>
-				
-				<div className="o-container u-text-align-center">
-					<h1>The Amazing Circle</h1>
-					<NumericInput onChange={ this.onNumericInputChange } />
-					<p>{this.state.errorMessage}</p>
-					<br/>
-					<Circle diameter={ this.state.numericValue } onClick={this.onCirleClick} />
-					<h1>{this.state.title}</h1>
-					<p>{this.state.content}</p>
-				</div>
+				<section className="c-section-full">
+					<div className="o-container u-text-align-center">
+						<h1>The Amazing Circle</h1>
+						<NumericInput onChange={ this.onNumericInputChange } />
+						<p>{this.state.errorMessage}</p>
+						<br/>
+						<Circle diameter={ this.state.numericValue } onClick={this.onCirleClick} />
+						<h1>{this.state.title}</h1>
+						<p>{this.state.content}</p>
+					</div>
+				</section>
 			</Fragment>
 		);
   	}
