@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import '../../node_modules/sass-mq/_mq.scss';
+
+// Tools
+@function rem($size) {
+    $remSize: $size / $global-font-size;
+    @return #{$remSize}rem;
+}
+
+//Settings
+$global-font-size: 16px;
+$global-line-height: 24px;
+
+$global-spacing-unit: rem($global-line-height / 2);
+
+
+
+
+body {
+    font-family: 'Montserrat';
+}
+
+// Elements
+input[type=number] {
+    padding: $global-spacing-unit;
+    font-size: 16px;
+}
+
+// Objects
+.o-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: $global-spacing-unit;
+    padding-right: $global-spacing-unit;
+
+    @include mq($from: wide) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+// Utilities
+.u-text-align-center {
+    text-align: center !important;
+}
+
+
+
+
