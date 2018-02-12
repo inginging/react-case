@@ -69,6 +69,7 @@ class App extends Component {
 						title: responseData.title,
 						content: responseData.body
 					});
+					
 			});
 		});
 
@@ -79,14 +80,19 @@ class App extends Component {
 		return (
 			<Fragment>
 				<section className="c-section-full">
-					<div className="o-container u-text-align-center">
-						<h1>The Amazing Circle</h1>
-						<NumericInput onChange={ this.onNumericInputChange } />
-						<p>{this.state.errorMessage}</p>
-						<br/>
-						<Circle diameter={ this.state.numericValue } onClick={this.onCirleClick} />
-						<h1>{this.state.title}</h1>
-						<p>{this.state.content}</p>
+					<div className="o-container o-grid">
+						<div className="o-grid__top">
+							<h1 className="u-margin-top-2x">Hello World!</h1>
+							<NumericInput onChange={ this.onNumericInputChange } />
+							<p className="c-error">{this.state.errorMessage}</p>
+						</div>
+						<div className="o-grid__middle">
+							<Circle diameter={ this.state.numericValue } onClick={this.onCirleClick} />
+						</div>
+						<div className="o-grid__bottom">
+							<h2>{this.state.title}</h2>
+							<p>{this.state.content}</p>
+						</div>
 					</div>
 				</section>
 			</Fragment>
