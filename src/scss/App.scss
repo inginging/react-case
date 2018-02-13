@@ -111,25 +111,37 @@ p {
 
 .o-grid__top {
     grid-area: top;
-    height: 30vh;
+    height: 33vh;
     text-align: center;
     z-index: 2;
+
+    @include mq($from: desktop) {
+        height: 30vh;
+    }
 
 }
 
 .o-grid__middle {
     grid-area: middle;
-    height: 40vh;
+    height: 34vh;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include mq($from: desktop) {
+        height: 40vh;
+    }
 }
 
 .o-grid__bottom {
     grid-area: bottom;
-    height: 30vh;
+    height: 33vh;
     text-align: center;
     z-index: 2;
+
+    @include mq($from: desktop) {
+        height: 30vh;
+    }
 }
 
 // Components

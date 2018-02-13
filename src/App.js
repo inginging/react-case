@@ -31,23 +31,25 @@ class App extends Component {
 
 		let value = event.target.value;
 
-		if (value > 100) {
+		const regEx = /^[1-9][0-9]?$|^100$/;
+		
+		if (regEx.test(value)) {
 
 			this.setState({  
-				errorMessage: 'The value can’t be bigger than 100',
-				numericValue:  0,
-				title: '',
-				content: ''
-			});
+				numericValue:  value,
+				errorMessage: '' 
+			}); 
 
 		} 
 		
 		else {
 
 			this.setState({  
-				numericValue:  value,
-				errorMessage: '' 
-			}); 
+				errorMessage: 'The value must be a number between 1 - 100',
+				numericValue:  0,
+				title: '',
+				content: ''
+			});
 
 		}
 	}
